@@ -1,0 +1,26 @@
+{
+  "name": "cuttle",
+  "description": "A React-based version of the card game Cuttle.",
+  "version": "2.0.0-alpha",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "^23.3.1",
+    "@types/webpack-env": "^1.13.6",
+    "emotion": "^9.2.6",
+    "knuth-shuffle": "^1.0.8",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-emotion": "^9.2.6",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-localstorage": "^0.4.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

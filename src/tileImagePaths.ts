@@ -1,0 +1,26 @@
+// Tiles
+export const wainwright = require('./images/wainwright.jpg') as string
+export const fabricwarehouse = require('./images/fabricwarehouse.jpg') as string
+export const spicewarehouse = require('./images/spicewarehouse.jpg') as string
+export const fruitwarehouse = require('./images/fruitwarehouse.jpg') as string
+export const postoffice = require('./images/postoffice.jpg') as string
+export const caravanassary = require('./images/caravanassary.jpg') as string
+export const fountain = require('./images/fountain.jpg') as string
+export const blackmarket = require('./images/blackmarket.jpg') as string
+export const teahouse = require('./images/teahouse.jpg') as string
+export const largemarket = require('./images/largemarket.jpg') as string
+export const smallmarket = require('./images/smallmarket.jpg') as string
+export const policestation = require('./images/policestation.jpg') as string
+export const sultanspalace = require('./images/sultanspalace.jpg') as string
+export const smallmosque = require('./images/smallmosque.jpg') as string
+export const greatmosque = require('./images/greatmosque.jpg') as string
+export const gemstonedealer = require('./images/gemstonedealer.jpg') as string
+export const roastingplant = require('./images/roastingplant.jpg') as string
+export const guildhall = require('./images/guildhall.jpg') as string
+export const tavern = require('./images/tavern.jpg') as string
+export const coffeehouse = require('./images/coffeehouse.jpg') as string
+export const embassy = require('./images/embassy.jpg') as string
+export const kiosk = require('./images/kiosk.jpg') as string
+export const auctionhouse = require('./images/auctionhouse.jpg') as string
+export const secretsociety = require('./images/secretsociety.jpg') as string
+export const catacombs = require('./images/catacombs.jpg') as string
