@@ -1,4 +1,4 @@
-import { INITIALIZE_BOARD, SELECT_TILE, CHANGE_NEXT_PLAYER } from 'actions/board'
+import { INITIALIZE_BOARD, SELECT_TILE, CHANGE_NEXT_PLAYER, PLAYER_MARK_TILE, PLAYER_WON_GAME } from 'actions/board'
 import { updateBoard } from 'utils/board'
 
 
@@ -10,7 +10,7 @@ const defaultState = {
   },
   ctx: {
     numPlayers: 2,
-    turn: 'nomnom',
+    turn: null,
     currentPlayer: 0,
     playOrder: [0, 1],
     stats: {
@@ -27,26 +27,49 @@ const defaultState = {
 
 export default function tictactoeReducer(state = defaultState, action) {
   switch (action.type) {
-
     case INITIALIZE_BOARD:
       return {
-        ...defaultState,
+        ...state,
         G: {
+          ...state.G,
           rows: action.rows,
           cols: action.cols,
           cells: [null, null, null, null, null, null, null, null, null]
         },
-        ctx:  {
-          turn: 'sdffsdfdsdfs'
+        ctx: {
+          ...state.ctx,
+          turn: 0
+        },
+        gameover: {
+          winner:  null
+        }
+      }
+
+    case PLAYER_WON_GAME:
+      return {
+        ...state,
+        ctx: {
+          ...state.ctx,
+          gameover: {
+            winner: action.winner
+          }
         }
       }
 
     case SELECT_TILE:
-      console.log(state)
-
       return {
         ...state,
         G: {
+          ...state.G,
+          cells: updateBoard(state.G.cells, state.ctx.currentPlayer, action.id)
+        }
+      }
+
+    case PLAYER_MARK_TILE:
+      return {
+        ...state,
+        G: {
+          ...state.G,
           cells: updateBoard(state.G.cells, state.ctx.currentPlayer, action.id)
         }
       }
@@ -55,7 +78,8 @@ export default function tictactoeReducer(state = defaultState, action) {
       return {
         ...state,
         ctx: {
-          currentPlayer: state.ctx.currentPlayer === 1 ? 2 : 1
+          ...state.ctx,
+          currentPlayer: state.ctx.currentPlayer === 1 ? 0 : 1
         }
       }
 

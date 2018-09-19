@@ -40,9 +40,7 @@ export function buildHighlights(rows, cols, tile, distance) {
   return getHighlights(tile, findRange(rows, cols, tile, distance))
 }
 
-/*
-
-function IsVictory(cells) {
+export function IsVictory(cells) {
   const positions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -58,15 +56,13 @@ function IsVictory(cells) {
     const symbol = cells[pos[0]];
     let winner = symbol;
     for (let i of pos) {
-      if (cells[i] != symbol) {
+      if (cells[i] !== symbol) {
         winner = null;
         break;
       }
     }
-    if (winner != null) return true;
+    if (winner !== null) return true;
   }
 
   return false;
 }
-
-*/

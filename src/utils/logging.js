@@ -1,5 +1,7 @@
+import { inTestMode } from 'utils/development'
+
 export function logEvent(eventName, data) {
-  if (process.env.NODE_ENV === 'test') {
+  if (inTestMode()) {
     return
   }
 

@@ -41,7 +41,7 @@ export const ListItemStyled = styled('li')(
   }
 )
 
-export const ListLinkStyled = styled('a')(
+export const ListLinkStyled = styled('span')(
   {
     color: '#505d6b',
     fontSize: '1.4rem',

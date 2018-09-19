@@ -1,4 +1,8 @@
 export function updateBoard(cells, currentPlayer, id) {
-  cells[id] = currentPlayer
-  return cells
+  return cells.map((val, index) => {
+    if(index === id){
+      return val === null ? currentPlayer : val
+    }
+    return val
+  })
 }

@@ -2,10 +2,11 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { TileBoard } from 'components/tileBoard/tileBoard'
 
-export const Board = ({ rows, cols, cells }) => {
+export const Board = () => {
+
   return (
     <div>
-      <TileBoard rows={rows} cols={cols} tiles={cells} />
+      <TileBoard />
     </div>
   )
 }
@@ -17,4 +18,3 @@ export default connect(({ board }) =>
     cells: board.G.cells
   })
 )(Board)
-

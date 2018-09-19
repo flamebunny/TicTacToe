@@ -1,8 +1,8 @@
 import React from 'react'
-import { Grid } from 'ui/grid'
+import Grid from 'ui/grid'
 
-export function TileBoard({ rows, cols, tiles }) {
+export function TileBoard() {
   return (
-    <Grid rows={rows} cols={cols} tiles={tiles} />
+    <Grid />
   )
 }

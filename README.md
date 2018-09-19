@@ -1,6 +1,6 @@
-# Cuttle
+# TicTacToe
 
-A React-based version of the card game Cuttle.
+A React-based version of TicTacToe.
 
 ## Install
 

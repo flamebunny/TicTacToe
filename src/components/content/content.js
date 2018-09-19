@@ -1,22 +1,35 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { ContentStyled } from 'components/content/content.styles'
-import Board from 'components/board/board'
+import Grid from 'ui/grid'
 
+export const Content = ({ turn, winner }) => {
 
-export const Content = ({ rows, cols, cells }) => {
+  const GameBoard = () => {
+    if (turn !== null)  {
+      return (
+        <div>
+          <p>Single Player Game</p>
+          <Grid />
+        </div>
+      )
+    }
+    return (
+      <p>Start Single Player Game</p>
+    )
+  }
+
   return (
-    <div>
-      {rows} {cols} {cells}
-    </div>
+    <ContentStyled>
+      <GameBoard />
+    </ContentStyled>
   )
 }
 
 export default connect(({ board }) =>
   ({
-    rows: board.G.rows,
-    cols: board.G.cols,
-    cells: board.G.cells
+    turn: board.ctx.turn,
+    winner: board.ctx.gameover.winner
   })
 )(Content)
 
