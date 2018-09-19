@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { selecttile } from 'actions/board'
 import { SquareStyled } from 'ui/square.styles'
 
-
 const SquareElem = ({ id, text }) =>
   <span>{text}</span>
 

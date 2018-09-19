@@ -32,7 +32,6 @@ export function Grid({ winner, rows, cols, cells }) {
   )
 }
 
-
 export default connect(({ board }) =>
   ({
     rows: board.G.rows,

@@ -1,7 +1,6 @@
 import { INITIALIZE_BOARD, SELECT_TILE, CHANGE_NEXT_PLAYER, PLAYER_MARK_TILE, PLAYER_WON_GAME } from 'actions/board'
 import { updateBoard } from 'utils/board'
 
-
 const defaultState = {
   G:  {
     rows: null,
